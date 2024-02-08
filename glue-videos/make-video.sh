@@ -7,5 +7,5 @@ dir=$1
 builtin cd ${dir}
 video=$(basename ${dir})
 echo ${video}
-ffmpeg -framerate 24 -pattern_type glob -i '*.jpg' -loglevel quiet ../${video}.mp4
+ffmpeg -framerate 24 -pattern_type glob -i '*.jpg' ../${video}.mp4
 builtin cd ../

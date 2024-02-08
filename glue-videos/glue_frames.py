@@ -10,6 +10,9 @@ SEPARATOR_WIDTH = 20
 video_path_left = Path(sys.argv[1])
 video_path_right = Path(sys.argv[2])
 
+assert video_path_left.is_file(), f'Video does not exist: {video_path_left}'
+assert video_path_right.is_file(), f'Video does not exist: {video_path_right}'
+
 OUTPUR_DIR = Path('results') / f'{video_path_left.stem}__{video_path_right.stem}'
 OUTPUR_DIR.mkdir(parents=True, exist_ok=True)
 
